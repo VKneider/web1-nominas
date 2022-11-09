@@ -9,8 +9,10 @@
 @media (min-width:768px) {
 
     .toggle{display: none}
-    .menu{display: flex;}
+    .menu{display: flex}
 }
+
+
 
 
 .menu{
@@ -116,32 +118,177 @@ nav {
 }
 
 
+.centrado{
+
+    width:900px;
+    margin:auto;
+}
+
+.items-center{
+
+flex-direction: column;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin: 20px;
+
+}
+
+dialog{
+    border: 5px solid var(--dark);
+    border-radius: 15px;
+    background: repeating-linear-gradient(30deg, var(--secondary), white);
+    
+}
+
+.inputs-modal{
+    display: flex;
+    margin: 15px;
+    border-radius: 15px;
+    height: 40px;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.inputs-modal-3{
+    display: flex;
+    margin: 15px;
+    border-radius: 15px;
+    height: 40px;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.radio-modal{
+    margin: 15px;
+    border-radius: 15px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+
+.centrado::backdrop{
+    background-color: black;
+    opacity: .3;
+
+}
+
+::placeholder {
+    text-align: center; 
+    color: var(--dark);
+ }
+
+
+.title-modal{
+    
+    border-bottom: 3px solid var(--secondary);
+    margin-bottom: 20px;
+    
+
+}
+
+label{
+    font-weight: bolder;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.label-radio{
+    font-weight: bolder;
+    border: 2px solid black;
+    margin: auto;
+    border-radius: 15px;
+}
+
+
+input:focus{
+    background-color: rgb(132, 179, 218);
+}
 
 
 
 
+.sep{
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 0px;
+    display: flex;
+}
+
+.card{
+    width: 400px;
+    height: 200px;
+    margin: 20px;
+    border: 5px solid var(--dark);
+    border-radius: 10px;
+    padding: 5px;
+    
+
+}
+
+.flex{
+    
+    display: flex;
+    
+}
+
+.xd{
+    align-items: center;
+}
+
+.inputs-modal-card{
+    display: flex;
+    margin: 5px;
+    border-radius: 15px;
+    height: 40px;
+    width: 300px;
+    text-align: center;
+    
+    font-weight: bold;
+}
+
+
+.background{
+    background-color: var(--dark);
+}
+
+.block {
+    pointer-events: none;
+}
 
 
 
+.box{
+    width: 500px;
+    height: 265px;
+    margin: 20px;
+    border: 5px solid var(--dark);
+    border-radius: 10px;
+    padding: 5px;
+    
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.data-modal{
+    display: flex;
+    margin: 15px;
+    border-radius: 15px;
+    height: 35px;
+    width: 450px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+    pointer-events: none;
+}
 
 
 
@@ -171,3 +318,4 @@ td,th{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
