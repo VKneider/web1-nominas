@@ -43,11 +43,12 @@
             <form id="formulario" class="items-center">
 
                 <label for="Nombre"> Nombres </label>
-                <input class="inputs-modal" type="text" id="Nombres" name="Nombre" placeholder="Nombres del Empleado" />
+                <input class="inputs-modal" type="text" id="Nombres" name="Nombres"
+                    placeholder="Nombres del Empleado" />
 
                 <label for="Apellidos"> Apellidos</label>
                 <input class="inputs-modal" type="text" id="Apellidos" name="Apellidos"
-                    placeholder="Cedula del empleado" />
+                    placeholder="Apellidos del empleado" />
 
                 <label for="Cedula"> Cedula de Identidad</label>
                 <input class="inputs-modal" type="text" id="Cedula" name="Cedula" placeholder="Cedula del empleado" />
@@ -59,10 +60,10 @@
                 <label for="Urb"> Cargo del Empleado </label>
                 <select class="inputs-modal" type="select" id="cargo-empleado" name="Cargo"
                     placeholder="Cargo del empleado">
-                    <input type="submit" id="submit-empleado" name="Submit" value="Agregar" />
+                    <input class="button-modal" type="submit" id="submit-empleado" name="Submit" value="Agregar" />
 
             </form>
-            <button id="close-insert-empleado"> Cerrar </button>
+            <button  class="button-close" id="close-insert-empleado"> Cerrar </button>
         </div>
 
     </dialog>
@@ -80,26 +81,25 @@
 
                 <label for="Tipo"> Tipo de Concepto </label>
                 <select class="inputs-modal" name="Tipo" id="Tipo">
-                    <option value="Ingreso">Ingreso</option>
-                    <option value="Egreso">Egreso</option>
+                    <option value="Aporte">Aporte</option>
+                    <option value="Sancion">Sancion</option>
                 </select>
 
                 <label for="Tipo"> Porcentaje o Monto Neto </label>
 
                 <span class="sep">
                     <label class="label-radio" for="Porcentaje">Porcentaje</label>
-                    <input class="radio-modal" type="radio" id="radio-porcentaje" name="Porcentaje"
+                    <input class="radio-modal" type="radio" id="radio-porcentaje" name="radiox"
                         placeholder="Porcentaje" />
                     <label class="label-radio" for="Porcentaje">Monto Neto</label>
-                    <input class="radio-modal" type="radio" id="radio-neto" name="Porcentaje"
-                        placeholder="Porcentaje" />
+                    <input class="radio-modal" type="radio" id="radio-neto" name="radiox" placeholder="Porcentaje" />
                 </span>
 
                 <div class="flex">
                     <div class="card items-center block" id="card1">
                         <label for="Porcentaje" style="background-color: white; margin: 15px;"> Ingrese el porcentaje
                             del Salario </label>
-                        <input class="inputs-modal-card" type="number" id="Porcentaje" name="Porcentaje"
+                        <input class="inputs-modal-card" type="number" id="Porcentaje" name="PorcentajeValor"
                             placeholder="Porcentaje" />
                         <select class="inputs-modal-card" name="Monto" id="select-salario"></select>
                     </div>
@@ -107,7 +107,7 @@
                     <div class="card items-center block" id="card2">
                         <label for="Porcentaje" style="background-color: white; margin: 15px;"> Ingrese el monto neto
                         </label>
-                        <input class="inputs-modal-card" type="number" id="Porcentaje" name="Porcentaje"
+                        <input class="inputs-modal-card" type="number" id="Porcentaje" name="NetoValor"
                             placeholder="Porcentaje" />
                     </div>
 
@@ -116,8 +116,9 @@
 
 
 
-                <input class="inputs-modal" type="submit" id="submit-empleado" name="Submit" value="Agregar" />
-                <button id="close-insert-concepto"> Cerrar </button>
+                <input class="button-modal" type="submit" id="submit-empleado" name="Submit" value="Agregar" />
+
+            </form> <button class="button-close" id="close-insert-concepto"> Cerrar </button>
         </div>
 
 
@@ -131,10 +132,11 @@
         <div class="items-center">
             <h1 class="title-modal"> Asignar concepto a empleado </h1>
 
-            <form id="form-conceptos">
+            <form id="form-asignar-conceptos">
 
                 <div class="flex xd">
-                    <input class="inputs-modal-3" type="text" id="asignar_cedula" name="cedula" placeholder="Cedula del Empleado" />
+                    <input class="inputs-modal-3" type="text" id="asignar_cedula" name="cedula"
+                        placeholder="Cedula del Empleado" />
                     <div class="box">
                         <input class="data-modal" id="data-nombre-empleado">
                         <input class="data-modal" id="data-cedula-empleado">
@@ -144,7 +146,8 @@
                 </div>
 
                 <div class="flex xd">
-                    <input class="inputs-modal-3" type="text" id="asignar_cedula" name="cedula" placeholder="Cedula del Empleado" />
+                    <input class="inputs-modal-3" type="text" id="asignar_concepto" name="concepto"
+                        placeholder="id del concepto" />
                     <div class="box">
 
                         <input class="data-modal" id="data-id-concepto">
@@ -156,32 +159,31 @@
 
                 </div>
 
-                <input type="submit" value="dasdas">
-
+                
+                <input class="button-modal" id="rd" type="submit" value="Asignar Concepto">
             </form>
-
-
-
-
-            <button id="close-asignar-concepto"> Cerrar </button>
+            
+            
+            
+            
+            <button class="button-close" id="close-asignar-concepto"> Cerrar </button>
         </div>
 
     </dialog>
 
 
 
+    <div class="flex" id="centerButs">
+
+        <button class="mainBut" onclick='generarTabla();'>Generar Tabla Empleados</button>
+        <button class="mainBut" onclick="generarConceptos();"> Generar Tabla Conceptos</button>
 
 
+    </div>
+    <div id="contenedor">
 
+    </div>
 
-
-
-
-
-
-    <h1> Tabla Dinamica</h1>
-    <button onclick='generarTabla();'>Generar Tabla</button>
-    <div id="contenedor">hola</div>
     <script type="text/javascript" src="main.js"></script>
 </body>
 
